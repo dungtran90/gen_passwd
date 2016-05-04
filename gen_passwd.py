@@ -1,10 +1,23 @@
 #!/usr/bin/env python
 
+"""
+    Create random pasword with:
+        + least one lowercase
+        + least one uppercase
+        + least one digit
+        + least one punctuation
+        + length = 16
+"""
+
 import random
 import string
 
 
 def gen_passwd(passwd_length=16):
+    """
+    Create password with default length = 16
+    """
+
     result = ""
     all_char_groups = [
         string.ascii_lowercase, string.ascii_uppercase,
