@@ -13,6 +13,7 @@ import random
 import string
 
 
+
 def gen_passwd(passwd_length=16):
     """
     Create password with default length = 16
