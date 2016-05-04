@@ -1,20 +1,21 @@
-import string
+#!/usr/bin/env python
+
 import random
+import string
 
-PASSWD_LENGTH = 16
 
-
-def gen_passwd():
+def gen_passwd(passwd_length=16):
     result = ""
-    all_chars = [
+    all_char_groups = [
         string.ascii_lowercase, string.ascii_uppercase,
         string.digits, string.punctuation]
-    for s in all_chars:
-        result += random.choice(s)
-    result += ("".join(random.sample("".join(all_chars), PASSWD_LENGTH - len(result))))
+    for char_group in all_char_groups:
+        result += random.choice(char_group)
+    result += "".join(random.sample(
+        "".join(all_char_groups),
+        passwd_length - len(result)))
     return "".join(random.sample(result, len(result)))
 
 
 if __name__ == "__main__":
-
     print gen_passwd()
