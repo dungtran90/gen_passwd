@@ -31,4 +31,4 @@ def gen_passwd(passwd_length=16):
 
 
 if __name__ == "__main__":
-    print gen_passwd()
+    gen_passwd()
